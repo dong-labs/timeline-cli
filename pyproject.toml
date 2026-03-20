@@ -1,6 +1,6 @@
 [project]
-name = "dong-timeline"
-version = "0.1.0"
+name = "timeline-cli"
+version = "0.1.1"
 description = "时间咚 - 记录人生/项目的关键节点"
 authors = [{name = "gudong", email = "gudong@example.com"}]
 readme = "README.md"
