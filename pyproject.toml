@@ -1,6 +1,6 @@
 [project]
 name = "timeline-cli"
-version = "0.1.1"
+version = "0.2.1"
 description = "时间咚 - 记录人生/项目的关键节点"
 authors = [{name = "gudong", email = "gudong@example.com"}]
 readme = "README.md"
@@ -8,7 +8,7 @@ requires-python = ">=3.11"
 dependencies = [
     "typer>=0.9.0",
     "rich>=13.0.0",
-    "dong-core>=0.3.0",
+    "dong-core>=0.4.0",
 ]
 
 [project.optional-dependencies]
