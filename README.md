@@ -2,6 +2,8 @@
 
 记录人生/项目的关键节点，让时间有迹可循
 
+[![Version](https://img.shields.io/badge/Version-0.2.1-blue.svg)](https://pypi.org/project/dong-timeline/)
+
 ## 安装
 
 ```bash
