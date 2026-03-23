@@ -6,6 +6,8 @@ from . import __version__
 app = typer.Typer(
     name="dong-timeline",
     help="时间咚 - 记录人生/项目的关键节点",
+    no_args_is_help=True,
+    add_completion=False,
 )
 
 # 导入命令
@@ -21,15 +23,27 @@ app.command()(stats.stats)
 app.command()(search.search)
 
 
-@app.callback()
-def main(
-    version: bool = typer.Option(False, "--version", "-v", help="显示版本"),
-):
-    """时间咚 - 记录人生/项目的关键节点"""
-    if version:
+def version_callback(value: bool) -> None:
+    """版本号回调函数"""
+    if value:
         from rich.console import Console
         console = Console()
         console.print(f"dong-timeline {__version__}")
         raise typer.Exit()
+
+
+@app.callback()
+def main(
+    version: bool = typer.Option(
+        False,
+        "--version",
+        "-v",
+        help="显示版本",
+        callback=version_callback,
+        is_eager=True,
+    ),
+):
+    """时间咚 - 记录人生/项目的关键节点"""
+    pass
 
 
